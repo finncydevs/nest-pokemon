@@ -7,9 +7,11 @@ dotenv.config();
 
 @Module({
   imports: [
-    MongooseModule.forRoot(process.env.MONGO_URL || "", {
-     
-    }),
+    MongooseModule.forRoot(
+      process.env.MONGO_URL ||
+        'mongodb+srv://admin:admin123@fullstack.tbecp.mongodb.net/pokemons?retryWrites=true&w=majority&appName=fullstack',
+      {},
+    ),
     PokemonModule,
   ],
 })
