@@ -4,11 +4,11 @@ import { PokemonModule } from './pokemons/pokemons.module';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
-
+console.log("this is in app module",process.env.MONGO_URL);
 @Module({
   imports: [
     MongooseModule.forRoot(
-      process.env.MONGO_URL || '',
+      process.env.MONGO_URL as string || '',
       {},
        
     ),
