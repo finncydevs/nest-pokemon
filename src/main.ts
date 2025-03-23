@@ -8,7 +8,6 @@ dotenv.config();
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Aktifkan validasi global
   app.useGlobalPipes(new ValidationPipe());
 
   app.enableCors({
