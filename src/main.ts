@@ -11,9 +11,8 @@ async function bootstrap() {
   // Aktifkan validasi global
   app.useGlobalPipes(new ValidationPipe());
 
-  // Aktifkan CORS agar frontend bisa mengakses backend
   app.enableCors({
-    origin: '*', // Jika hanya frontend tertentu, ganti dengan URL frontend-mu
+    origin: 'https://poke-wiki-pink.vercel.app/', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Authorization',
   });
